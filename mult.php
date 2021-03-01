@@ -28,7 +28,7 @@
         echo '</table>';
     }
     ?>
-    <button><a href="./index.html">Back</a></button>
+    <a href="./index.html">Back</a>
 </body>
 
 </html>
