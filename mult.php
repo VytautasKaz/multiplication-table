@@ -13,7 +13,20 @@
     <?php
     $number = $_POST['number'];
 
-    if ($number < 1) {
+    if (empty($number)) {
+        echo '<table><br>';
+        for ($i = 1; $i <= 10; $i++) {
+            echo '<tr>';
+            for ($j = 1; $j <= 10; $j++) {
+                $mult = $i * $j;
+                echo "<td>$mult</td> \n";
+            }
+            echo '</tr>';
+        }
+        echo '</table>';
+    }
+
+    if ($number < 1 && !empty($number)) {
         print("<script type=\"text/javascript\">alert('Input cannot be < 1.')</script>");
     } else {
         echo '<table><br>';
